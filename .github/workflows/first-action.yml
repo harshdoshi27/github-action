@@ -9,8 +9,11 @@ jobs:
     steps:
       - name: Print line
         run: echo "start file"
-      - name: Print line
-        run: echo "done file"
+      - name: "Print multiple line"
+        run: |
+            hostname
+            echo "First output"
+            echo "Second output"
 
   
   
