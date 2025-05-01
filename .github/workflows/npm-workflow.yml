@@ -1,0 +1,22 @@
+name: Project Validation
+on:
+  push
+
+jobs: 
+  test: 
+    runs-on: ubutu-latest
+    steps:
+        - name: Get code from repo 
+          uses: actions/checkout@v4
+        - name: Install Nodejs
+          uses: actions/setup-node@v4
+          with: 
+            node-version: 18
+        - name: Install dependencies
+          run: npm ci
+        - name: Run Tests
+          run: npm test
+
+
+
+
